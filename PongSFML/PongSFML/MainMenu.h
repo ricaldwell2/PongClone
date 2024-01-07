@@ -14,10 +14,7 @@ public:
 	void MoveUp();
 	void MoveDown();
 
-	int MainMenuPressed()
-	{
-		return MainMenuSelected;
-	}
+	int MainMenuPressed();
 	
 private:
 	int MainMenuSelected;

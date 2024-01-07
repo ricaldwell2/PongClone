@@ -1,8 +1,77 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "MainMenu.h"
 
 int main()
 {
+	sf::RenderWindow Menu(sf::VideoMode(1280, 720), "Pong");
+	MainMenu mainMenu(Menu.getSize().x, Menu.getSize().y);
+
+	while (Menu.isOpen())
+	{
+		sf::Event event;
+		while (Menu.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+			{
+				Menu.close();
+			}
+			if (event.type == sf::Event::KeyReleased)
+			{
+				if (event.key.code == sf::Keyboard::Up)
+				{
+					mainMenu.MoveUp();
+					break;
+				}
+				else if (event.key.code == sf::Keyboard::Down)
+				{
+					mainMenu.MoveDown();
+					break;
+				}
+				if (event.key.code == sf::Keyboard::Return)
+				{
+					sf::RenderWindow Play(sf::VideoMode(1280, 720), "game_name");
+					sf::RenderWindow Options(sf::VideoMode(1280, 720), "Options");
+					sf::RenderWindow About(sf::VideoMode(1280, 720), "About");
+					sf::RenderWindow Exit(sf::VideoMode(1280, 720), "Exit");
+
+					int x = mainMenu.MainMenuPressed();
+					if (x == 0)
+					{
+						while (Play.isOpen())
+						{
+							sf::Event eventX;
+							while (Play.pollEvent(eventX))
+							{
+								if (eventX.type == sf::Event::Closed)
+								{
+									Play.close();
+								}
+								if (eventX.type == sf::Event::KeyPressed)
+								{
+									if (eventX.key.code == sf::Keyboard::Escape)
+									{
+										Play.close();
+									}
+								}
+							}
+
+							Options.close();
+							About.close();
+							Play.clear();
+							Play.display();
+						}
+					}
+				}
+			}
+		}
+
+		Menu.clear();
+		mainMenu.draw(Menu);
+		Menu.display();
+	}
+
+	/*
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "Pong");
 
 	sf::FloatRect windowBounds(sf::Vector2f(0.f, 0.f), window.getDefaultView().getSize());
@@ -67,6 +136,7 @@ int main()
 		window.draw(ball);
 		window.display();
 	}
+	*/
 	
 	system("PAUSE");
 	return 0;

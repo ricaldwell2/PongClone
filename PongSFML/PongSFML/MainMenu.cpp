@@ -2,39 +2,36 @@
 
 MainMenu::MainMenu(float width, float height)
 {
-	if (!font.loadFromFile(""))	//select font file (Look at github to instance of use in falling box game)
+	if (!font.loadFromFile("PixelEmulator.ttf"))
 		throw("ERROR: COULD NOT LOAD FONT");
 
-	// Below are Menu Options, change these as you see fit later 
-		// remember you are looking to make a Pong game that is 1 or 2 player
-
-	// Play
+	// 1P
 	mainMenu[0].setFont(font);
 	mainMenu[0].setFillColor(sf::Color::White);
-	mainMenu[0].setString("Play");
-	mainMenu[0].setCharacterSize(70);
-	mainMenu[0].setPosition(400, 200);
+	mainMenu[0].setString("1-Player");
+	mainMenu[0].setCharacterSize(50);
+	mainMenu[0].setPosition(530, 500);
 
-	// Options
+	// 2P
 	mainMenu[1].setFont(font);
 	mainMenu[1].setFillColor(sf::Color::White);
-	mainMenu[1].setString("Options");
-	mainMenu[1].setCharacterSize(70);
-	mainMenu[1].setPosition(400, 200);
+	mainMenu[1].setString("2-Player");
+	mainMenu[1].setCharacterSize(50);
+	mainMenu[1].setPosition(530, 550);
 	
-	//About
+	//Options
 	mainMenu[2].setFont(font);
 	mainMenu[2].setFillColor(sf::Color::White);
-	mainMenu[2].setString("About");
-	mainMenu[2].setCharacterSize(70);
-	mainMenu[2].setPosition(400, 200);
+	mainMenu[2].setString("Options");
+	mainMenu[2].setCharacterSize(50);
+	mainMenu[2].setPosition(575, 600);
 
 	//Exit
 	mainMenu[3].setFont(font);
 	mainMenu[3].setFillColor(sf::Color::White);
 	mainMenu[3].setString("Exit");
-	mainMenu[3].setCharacterSize(70);
-	mainMenu[3].setPosition(400, 200);
+	mainMenu[3].setCharacterSize(50);
+	mainMenu[3].setPosition(600, 650);
 
 	MainMenuSelected = -1;
 }
@@ -82,4 +79,9 @@ void MainMenu::MoveDown()
 		}
 		mainMenu[MainMenuSelected].setFillColor(sf::Color::Blue);
 	}
+}
+
+int MainMenu::MainMenuPressed()
+{
+	return MainMenuSelected;
 }
