@@ -44,9 +44,7 @@ int main()
 			// Keyboard actions
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 			{
-				sf::FloatRect boundingBox = leftPaddle.getGlobalBounds();
-
-				if (boundingBox.top.interesects(windowBounds))
+				if (leftPaddle.getGlobalBounds().intersects(upperBoundry.getGlobalBounds()))
 					leftPaddle.move(0.f, 0.f);
 				else
 					leftPaddle.move(0.f, -25.f);
@@ -54,7 +52,10 @@ int main()
 			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 			{
-				leftPaddle.move(0.f, 25.f);
+				if (leftPaddle.getGlobalBounds().intersects(lowerBoundry.getGlobalBounds()))
+					leftPaddle.move(0.f, 0.f);
+				else
+					leftPaddle.move(0.f, 25.f);
 			}
 		}
 
