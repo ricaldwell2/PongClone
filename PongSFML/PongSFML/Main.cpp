@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "MainMenu.h"
+#include "OnePlayerRoom.h"
 
 int main()
 {
@@ -30,36 +31,44 @@ int main()
 				}
 				if (event.key.code == sf::Keyboard::Return)
 				{
-					sf::RenderWindow Play(sf::VideoMode(1280, 720), "game_name");
+					sf::RenderWindow OnePlayer(sf::VideoMode(1280, 720), "Pong 1-Player");
+					OnePlayerRoom onePlayerGame(OnePlayer.getSize().x, OnePlayer.getSize().y);
+
+					sf::RenderWindow TwoPlayers(sf::VideoMode(1280, 720), "Pong 2-Players");
+					
+					
 					sf::RenderWindow Options(sf::VideoMode(1280, 720), "Options");
-					sf::RenderWindow About(sf::VideoMode(1280, 720), "About");
+					
+					
 					sf::RenderWindow Exit(sf::VideoMode(1280, 720), "Exit");
 
 					int x = mainMenu.MainMenuPressed();
 					if (x == 0)
 					{
-						while (Play.isOpen())
+						while (OnePlayer.isOpen())
 						{
 							sf::Event eventX;
-							while (Play.pollEvent(eventX))
+							while (OnePlayer.pollEvent(eventX))
 							{
 								if (eventX.type == sf::Event::Closed)
 								{
-									Play.close();
+									OnePlayer.close();
 								}
 								if (eventX.type == sf::Event::KeyPressed)
 								{
 									if (eventX.key.code == sf::Keyboard::Escape)
 									{
-										Play.close();
+										OnePlayer.close();
 									}
 								}
 							}
 
+							TwoPlayers.close();
 							Options.close();
-							About.close();
-							Play.clear();
-							Play.display();
+							Exit.close();
+							OnePlayer.clear();
+							onePlayerGame.draw(OnePlayer);
+							OnePlayer.display();
 						}
 					}
 				}

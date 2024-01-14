@@ -1,2 +1,22 @@
-﻿  MainMenu.cpp
+﻿  Main.cpp
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\Main.cpp(9,52): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\Main.cpp(9,34): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\Main.cpp(35,76): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\Main.cpp(35,53): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
   PongSFML.vcxproj -> C:\Users\riley\Projects\PongClone\PongSFML\x64\Debug\PongSFML.exe
