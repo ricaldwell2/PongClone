@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Paddle.h"
-//#include <vector>
+
 #define Player_scores 2
 
 class OnePlayerRoom
@@ -12,12 +12,12 @@ public:
 	OnePlayerRoom(float width, float height);
 	~OnePlayerRoom();
 	
-	void draw(sf::RenderWindow& onePlayerRoom);
+	void Draw(sf::RenderWindow& onePlayerRoom);
 
-	Paddle getPlayerOnePaddle();
+	Paddle GetPlayerOnePaddle();
 	void PlayerOnePaddleMove();
 	
-	Paddle getCPUPaddle();
+	Paddle GetCPUPaddle();
 	void CPUPaddleMove();
 
 private:
@@ -29,12 +29,9 @@ private:
 	int scoreCPU = 0;
 
 	// Objects
-	Paddle PlayerOnePaddle;
-	Paddle CPUPaddle;
+	Paddle PlayerOnePaddle = { 10.f, 285.f, sf::Color::Green };
+	Paddle CPUPaddle = { 1220.f, 285.f, sf::Color::Blue };
 	sf::CircleShape ball;
-
-	float paddleWidth = 50.f;
-	float paddleHeight = 150.f;
 
 	// Clock
 	sf::Clock clock;

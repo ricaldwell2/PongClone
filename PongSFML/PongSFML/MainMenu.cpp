@@ -39,6 +39,7 @@ MainMenu::MainMenu(float width, float height)
 MainMenu::~MainMenu()
 {
 	// Nothing here??
+	delete mainMenu;
 }
 
 // Draw MainMenu

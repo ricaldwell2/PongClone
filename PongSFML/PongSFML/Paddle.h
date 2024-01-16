@@ -6,16 +6,20 @@
 class Paddle
 {
 public:
-	Paddle();
+	Paddle(float x, float y, sf::Color color);
 	~Paddle();
 
-	void SetPaddleDims(float width, float height);
-	void SetPaddlePosition(float x, float y);
+	virtual void Step();
+	virtual void Draw();
+	
+	void SetStartPositionX(float x);
+	void SetStartPositionY(float y);
 	void SetPaddleColor(sf::Color color);
 
 private:
-	sf::RectangleShape paddle;
-
-	float paddleWidth = 50.f;
-	float paddleHeight = 150.f;
+	sf::RectangleShape* paddle;
+	sf::Vector2f StartPosition;
+	sf::Color PaddleColor;
+	float paddleWidth;
+	float paddleHeight;
 };

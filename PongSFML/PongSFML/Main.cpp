@@ -67,7 +67,7 @@ int main()
 							Options.close();
 							Exit.close();
 							OnePlayer.clear();
-							onePlayerGame.draw(OnePlayer);
+							onePlayerGame.Draw(OnePlayer);
 							OnePlayer.display();
 						}
 					}
@@ -150,10 +150,3 @@ int main()
 	system("PAUSE");
 	return 0;
 }
-
-/*
-	TODO: 
-		1. move pink bars out of screen
-		2. 
-
-*/

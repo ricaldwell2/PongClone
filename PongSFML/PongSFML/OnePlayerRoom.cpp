@@ -18,24 +18,25 @@ OnePlayerRoom::OnePlayerRoom(float width, float height)
 	playerScores[1].setFillColor(sf::Color::Yellow);
 	playerScores[1].setString(("2P: ") + (std::to_string(scoreCPU)));
 	playerScores[1].setCharacterSize(50);
-	playerScores[1].setPosition(50, 50);
+	playerScores[1].setPosition(1080, 50);
 
 	// Player 1 Paddle
-	PlayerOnePaddle.SetPaddleDims(paddleWidth, paddleHeight);
-	PlayerOnePaddle.SetPaddlePosition(10.f, 282.f);
+	PlayerOnePaddle.SetStartPositionX(10.f);
+	PlayerOnePaddle.SetStartPositionY(282.f);
 	PlayerOnePaddle.SetPaddleColor(sf::Color::Green);
 
 	// CPU Paddle
-	CPUPaddle.SetPaddleDims(paddleWidth, paddleHeight);
-	CPUPaddle.SetPaddlePosition(1220.f, 285.f);
+	CPUPaddle.SetStartPositionX(1220.f);
+	CPUPaddle.SetStartPositionY(285.f);
 	CPUPaddle.SetPaddleColor(sf::Color::Blue);
 }
+
 OnePlayerRoom::~OnePlayerRoom()
 {
 	// Nothing here??
 }
 
-void OnePlayerRoom::draw(sf::RenderWindow& onePlayerRoom)
+void OnePlayerRoom::Draw(sf::RenderWindow& onePlayerRoom)
 {
 	for (int i = 0; i < Player_scores; ++i)
 	{
@@ -45,10 +46,11 @@ void OnePlayerRoom::draw(sf::RenderWindow& onePlayerRoom)
 	//onePlayerRoom.draw(PlayerOnePaddle);
 }
 
-Paddle OnePlayerRoom::getPlayerOnePaddle()
+Paddle OnePlayerRoom::GetPlayerOnePaddle()
 {
 	return PlayerOnePaddle;
 }
+
 /*
 void OnePlayerRoom::PlayerOnePaddleMove()
 {
@@ -70,7 +72,7 @@ void OnePlayerRoom::PlayerOnePaddleMove()
 }
 */
 
-Paddle OnePlayerRoom::getCPUPaddle()
+Paddle OnePlayerRoom::GetCPUPaddle()
 {
 	return CPUPaddle;
 }
