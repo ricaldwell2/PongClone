@@ -21,13 +21,13 @@ OnePlayerRoom::OnePlayerRoom(float width, float height)
 	playerScores[1].setPosition(1080, 50);
 
 	// Player 1 Paddle
-	PlayerOnePaddle.SetStartPositionX(10.f);
-	PlayerOnePaddle.SetStartPositionY(282.f);
+	//PlayerOnePaddle.SetStartPositionX(10.f);
+	//PlayerOnePaddle.SetStartPositionY(282.f);
 	PlayerOnePaddle.SetPaddleColor(sf::Color::Green);
 
 	// CPU Paddle
-	CPUPaddle.SetStartPositionX(1220.f);
-	CPUPaddle.SetStartPositionY(285.f);
+	//CPUPaddle.SetStartPositionX(1220.f);
+	//CPUPaddle.SetStartPositionY(285.f);
 	CPUPaddle.SetPaddleColor(sf::Color::Blue);
 }
 
@@ -38,39 +38,18 @@ OnePlayerRoom::~OnePlayerRoom()
 
 void OnePlayerRoom::Draw(sf::RenderWindow& onePlayerRoom)
 {
+	/*
 	for (int i = 0; i < Player_scores; ++i)
 	{
 		onePlayerRoom.draw(playerScores[i]);
 	}
-
-	//onePlayerRoom.draw(PlayerOnePaddle);
+	*/
 }
 
 Paddle OnePlayerRoom::GetPlayerOnePaddle()
 {
 	return PlayerOnePaddle;
 }
-
-/*
-void OnePlayerRoom::PlayerOnePaddleMove()
-{
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-	{
-		if (PlayerOnePaddle.getGlobalBounds().intersects(PlayerOnePaddle.getGlobalBounds()))
-			PlayerOnePaddle.move(0.f, 0.f);
-		else
-			PlayerOnePaddle.move(0.f, -25.f);
-
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-	{
-		if (PlayerOnePaddle.getGlobalBounds().intersects(PlayerOnePaddle.getGlobalBounds()))
-			PlayerOnePaddle.move(0.f, 0.f);
-		else
-			PlayerOnePaddle.move(0.f, 25.f);
-	}
-}
-*/
 
 Paddle OnePlayerRoom::GetCPUPaddle()
 {

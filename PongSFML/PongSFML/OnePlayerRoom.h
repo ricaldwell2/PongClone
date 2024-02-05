@@ -2,11 +2,12 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "BaseRoom.h"
 #include "Paddle.h"
 
 #define Player_scores 2
 
-class OnePlayerRoom
+class OnePlayerRoom : public BaseRoom
 {
 public:
 	OnePlayerRoom(float width, float height);

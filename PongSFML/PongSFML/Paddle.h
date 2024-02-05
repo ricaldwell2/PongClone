@@ -1,19 +1,15 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-#include<iostream>
+#include "BaseObject.h"
 
-class Paddle
+class Paddle : public BaseObject
 {
 public:
 	Paddle(float x, float y, sf::Color color);
 	~Paddle();
 
-	virtual void Step();
-	virtual void Draw();
-	
-	void SetStartPositionX(float x);
-	void SetStartPositionY(float y);
+	// will need a step event for the movement...
+
 	void SetPaddleColor(sf::Color color);
 
 private:

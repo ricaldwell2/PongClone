@@ -139,12 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseGame.cpp" />
+    <ClCompile Include="BaseObject.cpp" />
+    <ClCompile Include="BaseRoom.cpp" />
+    <ClCompile Include="GameInitializationRoom.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="OnePlayerRoom.cpp" />
     <ClCompile Include="Paddle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseGame.h" />
+    <ClInclude Include="BaseObject.h" />
+    <ClInclude Include="BaseRoom.h" />
+    <ClInclude Include="GameInitializationRoom.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="OnePlayerRoom.h" />
     <ClInclude Include="Paddle.h" />

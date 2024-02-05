@@ -1,17 +1,15 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-#include<iostream>
+#include "BaseRoom.h"
 
 #define Max_main_menu 4
 
-class MainMenu
+class MainMenu : public BaseRoom
 {
 public:
-	MainMenu(float width, float height);
-	~MainMenu();
+	MainMenu();
 
-	void draw(sf::RenderWindow& window);
+	void Draw(sf::RenderWindow& window);
 	void MoveUp();
 	void MoveDown();
 

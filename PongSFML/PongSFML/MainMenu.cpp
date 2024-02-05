@@ -1,6 +1,8 @@
 #include "MainMenu.h"
+#include "BaseGame.h" 
 
-MainMenu::MainMenu(float width, float height)
+MainMenu::MainMenu()
+	:BaseRoom()
 {
 	if (!font.loadFromFile("PixelEmulator.ttf"))
 		throw("ERROR: COULD NOT LOAD FONT");
@@ -36,14 +38,8 @@ MainMenu::MainMenu(float width, float height)
 	MainMenuSelected = -1;
 }
 
-MainMenu::~MainMenu()
-{
-	// Nothing here??
-	delete mainMenu;
-}
-
 // Draw MainMenu
-void MainMenu::draw(sf::RenderWindow& window)
+void MainMenu::Draw(sf::RenderWindow& window)
 {
 	for (int i = 0; i < Max_main_menu; ++i)
 	{

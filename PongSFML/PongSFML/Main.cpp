@@ -1,10 +1,15 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "BaseGame.h"
 #include "MainMenu.h"
 #include "OnePlayerRoom.h"
 
 int main()
 {
+	BaseGame::GetInstance()->SetFPS(10);
+	BaseGame::GetInstance()->Run();
+
+	/*
 	sf::RenderWindow Menu(sf::VideoMode(1280, 720), "Pong");
 	MainMenu mainMenu(Menu.getSize().x, Menu.getSize().y);
 
@@ -79,6 +84,8 @@ int main()
 		mainMenu.draw(Menu);
 		Menu.display();
 	}
+	*/
+
 
 	/*
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "Pong");

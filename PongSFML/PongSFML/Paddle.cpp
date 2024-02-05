@@ -1,13 +1,12 @@
 #include "Paddle.h"
+#include "BaseGame.h"
 
 Paddle::Paddle(float x, float y, sf::Color color)
-	:paddle(new sf::RectangleShape()),
-	StartPosition(x, y),
-	PaddleColor(sf::Color()),
-	paddleWidth(50.f),
-	paddleHeight(150.f)
+	:BaseObject(x, y, "", 4, 1),
+	 paddle(new sf::RectangleShape()),
+	 PaddleColor(sf::Color())
 {
-	
+	SetDepth(3);
 }
 
 Paddle::~Paddle()
@@ -15,34 +14,12 @@ Paddle::~Paddle()
 	delete paddle;
 }
 
-void Paddle::Step()
-{
-
-}
-
-void Paddle::Draw()
-{
-	//sf::RenderWindow draw(*paddle);
-}
-
-/*
-void Paddle::SetPaddleDims(float width, float height)
-{
-	paddle.setSize(sf::Vector2f(width, height));
-}
-*/
-
-void Paddle::SetStartPositionX(float x)
-{
-	StartPosition.x = x;
-}
-
-void Paddle::SetStartPositionY(float y)
-{
-	StartPosition.y = y;
-}
-
 void Paddle::SetPaddleColor(sf::Color color)
 {
 	PaddleColor = color;
 }
+
+/*
+paddleWidth(50.f),
+paddleHeight(150.f)
+*/
