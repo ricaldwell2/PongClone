@@ -57,6 +57,9 @@
     <ClCompile Include="GameInitializationRoom.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="BaseChoice.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenu.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
     <ClInclude Include="GameInitializationRoom.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseChoice.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>

@@ -36,6 +36,7 @@ MainMenu::MainMenu()
 	mainMenu[3].setPosition(600, 650);
 
 	MainMenuSelected = -1;
+
 }
 
 // Draw MainMenu

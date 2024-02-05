@@ -145,6 +145,7 @@
     <ClCompile Include="GameInitializationRoom.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="BaseChoice.cpp" />
     <ClCompile Include="OnePlayerRoom.cpp" />
     <ClCompile Include="Paddle.cpp" />
   </ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="BaseRoom.h" />
     <ClInclude Include="GameInitializationRoom.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="BaseChoice.h" />
     <ClInclude Include="OnePlayerRoom.h" />
     <ClInclude Include="Paddle.h" />
   </ItemGroup>

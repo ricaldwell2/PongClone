@@ -9,7 +9,7 @@ class MainMenu : public BaseRoom
 public:
 	MainMenu();
 
-	void Draw(sf::RenderWindow& window);
+	//void Draw(sf::RenderWindow& window);
 	void MoveUp();
 	void MoveDown();
 

@@ -1,2 +1,10 @@
-﻿  OnePlayerRoom.cpp
-  PongSFML.vcxproj -> C:\Users\riley\Projects\PongClone\PongSFML\x64\Debug\PongSFML.exe
+﻿  GameInitializationRoom.cpp
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\GameInitializationRoom.cpp(10,80): error C2065: 'font': undeclared identifier
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\GameInitializationRoom.cpp(10,22): error C2661: 'BaseChoice::BaseChoice': no overloaded function takes 5 arguments
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\GameInitializationRoom.cpp(10,22): message : while trying to match the argument list '(float, float, int, const char [9], const sf::Color)'
+  Main.cpp
+  MainMenu.cpp
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(43,16): error C2509: 'Draw': member function not declared in 'MainMenu'
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.h(7,7): message : see declaration of 'MainMenu'
+  BaseChoice.cpp
+  Generating Code...
