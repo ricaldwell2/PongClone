@@ -1,10 +1,24 @@
-﻿  GameInitializationRoom.cpp
-C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\GameInitializationRoom.cpp(10,80): error C2065: 'font': undeclared identifier
-C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\GameInitializationRoom.cpp(10,22): error C2661: 'BaseChoice::BaseChoice': no overloaded function takes 5 arguments
-C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\GameInitializationRoom.cpp(10,22): message : while trying to match the argument list '(float, float, int, const char [9], const sf::Color)'
+﻿  BaseFont.cpp
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseFont.cpp(18,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseFont.cpp(18,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  BaseGame.cpp
+  BaseObject.cpp
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseObject.cpp(23,4): error C2653: 'ObjectTextureManager': is not a class or namespace name
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseObject.cpp(23,26): error C2065: 'GetInstance': undeclared identifier
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseObject.cpp(60,13): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  BaseRoom.cpp
+  GameInitializationRoom.cpp
   Main.cpp
   MainMenu.cpp
-C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(43,16): error C2509: 'Draw': member function not declared in 'MainMenu'
-C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.h(7,7): message : see declaration of 'MainMenu'
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(11,31): error C2665: 'BaseChoice::BaseChoice': no overloaded function could convert all the argument types
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseChoice.h(9,2): message : could be 'BaseChoice::BaseChoice(float,float,const std::string &,void (__cdecl *)(void),const std::string &,sf::Color,sf::Color,const std::string &)'
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(11,31): message : 'BaseChoice::BaseChoice(float,float,const std::string &,void (__cdecl *)(void),const std::string &,sf::Color,sf::Color,const std::string &)': cannot convert argument 3 from 'int' to 'const std::string &'
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(11,46): message : Reason: cannot convert from 'int' to 'const std::string'
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(11,46): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\MainMenu.cpp(11,31): message : while trying to match the argument list '(float, float, int, const char [9], const sf::Color, const sf::Color, sf::Font)'
   BaseChoice.cpp
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseChoice.cpp(35,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\riley\Projects\PongClone\PongSFML\PongSFML\BaseChoice.cpp(35,18): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  OnePlayerRoom.cpp
+  Paddle.cpp
   Generating Code...

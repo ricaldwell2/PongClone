@@ -17,7 +17,6 @@ BaseObject::BaseObject(float x,
 	 Image_Index(0),
 	 Image_Speed(0)
 {
-	/*
 	if (resource != "")
 	{
 		sf::Texture* Texture =
@@ -25,7 +24,6 @@ BaseObject::BaseObject(float x,
 		Sprite->setTexture(*Texture);
 		Sprite->setPosition(x, y);
 	}
-	*/
 }
 
 BaseObject::~BaseObject()
@@ -253,6 +251,7 @@ int BaseObject::SpriteHeight()
 {
 	return Sprite->getTexture()->getSize().y / VerticalFrames;
 }
+
 
 bool BaseObject::IsPointWithinSpriteBounds(int x, int y)
 {

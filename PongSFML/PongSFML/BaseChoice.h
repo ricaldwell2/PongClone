@@ -1,20 +1,32 @@
 #pragma once
 
+#include "BaseFont.h"
 #include "BaseObject.h"
 
 class BaseChoice : public BaseObject
 {
 public:
 	BaseChoice(float x,
-		float y,
-		int characterSize,
-		std::string characterString,
-		sf::Color color,
-		sf::Font font);
+			   float y,
+			   const std::string& spriteResource,
+		       void(*callback)(),
+			   const std::string& text,
+			   sf::Color onColor,
+			   sf::Color offColor,
+			   const std::string& fontResource = "basic_font");
+
+	virtual ~BaseChoice();
+
+	virtual void Step() override;
+	virtual void Draw() override;
 
 private:
-	int Size;
-	std::string CharacterString;
-	sf::Color Color;
-	sf::Font Font;
+	void(*Callback)();
+
+	//int CharacterSize;
+	BaseFont* Font;
+	std::string Text;
+	
+	sf::Color OnColor;
+	sf::Color OffColor;
 };

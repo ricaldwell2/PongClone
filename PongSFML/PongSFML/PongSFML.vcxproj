@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseFont.cpp" />
     <ClCompile Include="BaseGame.cpp" />
     <ClCompile Include="BaseObject.cpp" />
     <ClCompile Include="BaseRoom.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="Paddle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseFont.h" />
     <ClInclude Include="BaseGame.h" />
     <ClInclude Include="BaseObject.h" />
     <ClInclude Include="BaseRoom.h" />

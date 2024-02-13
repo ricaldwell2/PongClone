@@ -7,7 +7,7 @@ GameInitializationRoom::GameInitializationRoom()
 	//Engine level sprite memory allocation
 
 	//Game level sprite memory allocation
-	BaseChoice OnePlayer(530.f, 500.f, 50, "1-Player", sf::Color::White, sf::Font(font));
+	
 
 	//...put main menu background here
 	//SFMLTextureManager::GetInstance->AddTexture("mainmenubackground", "Mainmenu.filename");

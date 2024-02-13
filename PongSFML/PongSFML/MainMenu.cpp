@@ -1,4 +1,5 @@
 #include "MainMenu.h"
+#include "BaseChoice.h"
 #include "BaseGame.h" 
 
 MainMenu::MainMenu()
@@ -7,6 +8,9 @@ MainMenu::MainMenu()
 	if (!font.loadFromFile("PixelEmulator.ttf"))
 		throw("ERROR: COULD NOT LOAD FONT");
 
+	InstanceCreate(new BaseChoice(530.f, 500.f, 50, "1-Player", sf::Color::Blue, sf::Color::White, sf::Font(font)));
+
+	/*
 	// 1P
 	mainMenu[0].setFont(font);
 	mainMenu[0].setFillColor(sf::Color::White);
@@ -36,9 +40,11 @@ MainMenu::MainMenu()
 	mainMenu[3].setPosition(600, 650);
 
 	MainMenuSelected = -1;
+	*/
 
 }
 
+/*
 // Draw MainMenu
 void MainMenu::Draw(sf::RenderWindow& window)
 {
@@ -47,6 +53,7 @@ void MainMenu::Draw(sf::RenderWindow& window)
 		window.draw(mainMenu[i]);
 	}
 }
+*/
 
 // MoveUp
 void MainMenu::MoveUp()
