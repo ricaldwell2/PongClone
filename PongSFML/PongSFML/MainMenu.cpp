@@ -8,7 +8,8 @@ MainMenu::MainMenu()
 	if (!font.loadFromFile("PixelEmulator.ttf"))
 		throw("ERROR: COULD NOT LOAD FONT");
 
-	InstanceCreate(new BaseChoice(530.f, 500.f, 50, "1-Player", sf::Color::Blue, sf::Color::White, sf::Font(font)));
+	InstanceCreate(new BaseFont(50, 50, "PONG"))
+	//InstanceCreate(new BaseFont(530, 500, 50, "1-Player", sf::Color::Blue, sf::Color::White, sf::Font(font)));
 
 	/*
 	// 1P

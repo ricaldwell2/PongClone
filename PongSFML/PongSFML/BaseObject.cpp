@@ -1,4 +1,7 @@
+#include <iostream>
+#include "BaseGame.h"
 #include "BaseObject.h"
+#include "TextureManager.h"
 
 BaseObject::BaseObject(float x,
 					   float y,
@@ -20,7 +23,7 @@ BaseObject::BaseObject(float x,
 	if (resource != "")
 	{
 		sf::Texture* Texture =
-			ObjectTextureManager::GetInstance->GetTexture(resource);
+			TextureManager::GetInstance()->GetTexture(resource);
 		Sprite->setTexture(*Texture);
 		Sprite->setPosition(x, y);
 	}

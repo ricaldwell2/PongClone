@@ -149,6 +149,7 @@
     <ClCompile Include="BaseChoice.cpp" />
     <ClCompile Include="OnePlayerRoom.cpp" />
     <ClCompile Include="Paddle.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseFont.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="BaseChoice.h" />
     <ClInclude Include="OnePlayerRoom.h" />
     <ClInclude Include="Paddle.h" />
+    <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
