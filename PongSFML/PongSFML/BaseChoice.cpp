@@ -11,7 +11,7 @@ BaseChoice::BaseChoice(float x,
 					   const std::string& fontResource)
 	:BaseObject(x, y, spriteResource, 2, 1),
 	 Callback(callback),
-	 Font(new BaseFont(fontResource)),
+	 Font(new BaseFont(x, y, fontResource)),
 	 Text(text),
 	 OnColor(onColor),
 	 OffColor(offColor)

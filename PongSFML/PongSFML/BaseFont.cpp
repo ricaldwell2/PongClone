@@ -1,15 +1,31 @@
 #include "BaseFont.h"
 #include "BaseGame.h"
 
-BaseFont::BaseFont(const std::string& resource)
-	:BaseObject(0, 0, resource, 16, 16)
+BaseFont::BaseFont(float x, float y, std::string text, const std::string& resource)
+	:StartPosition(x, y),
+	 PreviousPosition(x, y),
+	 IsSelected(false),
+	 DepthValue(0.0),
+	 Alarms(5, -1),
+	 MenuChoice(text)
 {
 	//Nothing here...
 }
 
+BaseFont::~BaseFont()
+{
+	delete MenuChoice;
+	MenuChoice = nullptr;
+}
+
+float BaseFont::X()
+{
+	return MenuChoice->getPosition().x;
+}
+
 //MUST BE CALLED IN A DRAW EVENT!
-void BaseFont::Print(int x,
-					 int y,
+void BaseFont::Print(float x,
+					 float y,
 					 const std::string& text,
 					 sf::Color tint,
 					 float xScale,
